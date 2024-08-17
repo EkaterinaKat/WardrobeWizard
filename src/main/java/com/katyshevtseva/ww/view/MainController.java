@@ -1,4 +1,4 @@
-package org.katyshevtseva.wardrobewizard.view;
+package com.katyshevtseva.ww.view;
 
 import com.katyshevtseva.fx.FxUtils;
 import com.katyshevtseva.fx.WindowBuilder;
@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.katyshevtseva.wardrobewizard.view.utils.ViewConstants.WwNodeInfo.ITEMS;
+import static com.katyshevtseva.ww.view.utils.ViewConstants.WwNodeInfo.ITEMS;
 
 public class MainController extends AbstractSwitchController implements WindowBuilder.FxController {
 

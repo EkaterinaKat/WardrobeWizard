@@ -1,9 +1,9 @@
-package org.katyshevtseva.wardrobewizard.view.utils;
+package com.katyshevtseva.ww.view.utils;
 
 import com.katyshevtseva.fx.Size;
 import com.katyshevtseva.fx.WindowBuilder;
+import com.katyshevtseva.ww.core.CoreConstants;
 import lombok.Getter;
-import org.katyshevtseva.wardrobewizard.core.CoreConstants;
 
 public class ViewConstants {
 

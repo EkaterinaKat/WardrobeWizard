@@ -1,11 +1,11 @@
-package org.katyshevtseva.wardrobewizard;
+package com.katyshevtseva.ww;
 
 import com.katyshevtseva.fx.WindowBuilder;
+import com.katyshevtseva.ww.view.MainController;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.katyshevtseva.wardrobewizard.view.MainController;
 
-import static org.katyshevtseva.wardrobewizard.view.utils.ViewConstants.WwDialogInfo.MAIN;
+import static com.katyshevtseva.ww.view.utils.ViewConstants.WwDialogInfo.MAIN;
 
 public class Main extends Application {
 
