@@ -49,6 +49,11 @@
             <artifactId>KikiLib</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.katyshevtseva</groupId>
+            <artifactId>collage</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

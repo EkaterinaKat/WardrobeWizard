@@ -1,5 +1,6 @@
 package com.katyshevtseva.ww.core.entity;
 
+import com.katyshevtseva.hibernate.HasId;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -8,7 +9,7 @@ import java.util.Objects;
 @Data
 @Entity
 @Table(name = "component_entity")
-public class ComponentEntity {
+public class ComponentEntity implements HasId {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

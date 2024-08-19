@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx">
+
+    <HBox>
+        <Button fx:id="pieceCreateButton" text="New Piece"/>
+        <Pane prefWidth="40"/>
+        <Label fx:id="typeLabel" text="Select clothes type"/>
+        <Pane prefWidth="10"/>
+        <Button fx:id="clearTypeButton" text="X"/>
+        <Pane prefWidth="20"/>
+        <ComboBox fx:id="categoryComboBox"/>
+        <Pane prefWidth="20"/>
+        <ComboBox fx:id="stateComboBox"/>
+    </HBox>
+
+    <Pane prefHeight="20"/>
+
+    <HBox>
+        <GridPane vgap="10">
+            <VBox fx:id="galleryPane" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <VBox fx:id="paginationPane" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        </GridPane>
+        <Pane prefWidth="20"/>
+        <VBox>
+            <Pane fx:id="imagePane"/>
+            <Pane prefHeight="20"/>
+            <Label fx:id="infoLabel" maxWidth="350" wrapText="true"/>
+            <Pane prefHeight="20"/>
+            <Button fx:id="showOutfitsButton" text="Show outfits" visible="false"/>
+            <Pane prefHeight="20"/>
+            <Button fx:id="editButton" text="Edit" visible="false"/>
+            <Pane prefHeight="20"/>
+            <Button fx:id="archiveButton" text="Archive" visible="false"/>
+        </VBox>
+    </HBox>
+
+</VBox>

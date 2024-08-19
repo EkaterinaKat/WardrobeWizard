@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx">
+
+
+    <HBox>
+        <Button fx:id="outfitCreateButton" text="New Outfit"/>
+        <Pane prefWidth="40"/>
+        <ComboBox fx:id="seasonComboBox"/>
+        <Pane prefWidth="10"/>
+        <Button fx:id="clearSeasonButton" text="X"/>
+        <Pane prefWidth="10"/>
+        <ComboBox fx:id="categoryComboBox"/>
+    </HBox>
+
+    <Pane prefHeight="20"/>
+
+    <Pane fx:id="outfitGridContainer" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+</VBox>

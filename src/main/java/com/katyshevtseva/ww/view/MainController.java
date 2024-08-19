@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.katyshevtseva.ww.view.utils.ViewConstants.WwNodeInfo.ITEMS;
+import static com.katyshevtseva.ww.view.utils.ViewConstants.WwNodeInfo.*;
 
 public class MainController extends AbstractSwitchController implements WindowBuilder.FxController {
 
@@ -28,10 +28,12 @@ public class MainController extends AbstractSwitchController implements WindowBu
 
     private List<Section> getSections() {
         return Arrays.asList(
-                new Section("Items", new ItemsController(),
-                controller -> WindowBuilder.getNode(ITEMS, controller)),
-                new Section("Items", new ItemsController(),
-                        controller -> WindowBuilder.getNode(ITEMS, controller)));
+                new Section("Statistics", new StatisticsController(),
+                        controller -> WindowBuilder.getNode(STATISTICS, controller)),
+                new Section("Pieces", new PiecesController(),
+                        controller -> WindowBuilder.getNode(PIECES, controller)),
+                new Section("Outfits", new OutfitController(),
+                        controller -> WindowBuilder.getNode(OUTFITS, controller)));
     }
 
     private void placeButton(Button button) {

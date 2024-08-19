@@ -1,14 +1,16 @@
 package com.katyshevtseva.ww.core.entity;
 
+import com.katyshevtseva.hibernate.HasId;
 import com.katyshevtseva.ww.core.enums.Category;
 import com.katyshevtseva.ww.core.enums.OutfitSeason;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.stream.Collectors;
 
 @Data
 @Entity
-public class Outfit {
+public class Outfit implements HasId {
     @Enumerated(EnumType.STRING)
     OutfitSeason season;
     @Enumerated(EnumType.STRING)
@@ -31,12 +33,13 @@ public class Outfit {
         return fullDesc.toString();
     }
 
-//    public boolean containsArchivedPieces() {
-//        for (Piece piece : collageEntity.getComponents().stream().map(ComponentEntity::getPiece).collect(Collectors.toList())) {
-//            if (piece.getEndDate() != null) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
+    public boolean containsArchivedPieces() {
+        for (Piece piece : collageEntity.getComponents().stream()
+                .map(ComponentEntity::getPiece).collect(Collectors.toList())) {
+            if (piece.getEndDate() != null) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

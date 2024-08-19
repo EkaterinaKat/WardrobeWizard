@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx">
+
+    <Pane prefHeight="30"/>
+
+    <HBox>
+        <Pane prefWidth="30"/>
+
+        <Pane fx:id="imagePane"/>
+
+        <Pane prefWidth="30"/>
+
+        <VBox maxWidth="310">
+            <TextArea fx:id="descTextArea" text="-" prefHeight="100" wrapText="true"/>
+            <Pane prefHeight="20"/>
+            <HBox>
+                <DatePicker fx:id="startDatePicker"/>
+                <Pane maxWidth="10" minWidth="10"/>
+                <DatePicker fx:id="endDatePicker"/>
+            </HBox>
+            <Pane prefHeight="20"/>
+            <ComboBox fx:id="categoryComboBox"/>
+            <Pane prefHeight="20"/>
+            <ComboBox fx:id="typeComboBox"/>
+            <Pane prefHeight="20"/>
+            <Button text="Save" fx:id="saveButton"/>
+        </VBox>
+
+        <Pane prefWidth="30"/>
+    </HBox>
+
+
+</VBox>

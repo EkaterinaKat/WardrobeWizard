@@ -1,10 +1,12 @@
 package com.katyshevtseva.ww.core.entity;
 
+import com.katyshevtseva.hibernate.HasId;
 import com.katyshevtseva.ww.core.enums.Category;
 import com.katyshevtseva.ww.core.enums.PieceSubtype;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Objects;
 
@@ -12,7 +14,7 @@ import static com.katyshevtseva.date.DateUtils.READABLE_DATE_FORMAT;
 
 @Data
 @Entity
-public class Piece {
+public class Piece implements HasId {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -36,8 +38,8 @@ public class Piece {
     @Column(name = "end_date")
     private Date endDate;
 
-//    @OneToMany(mappedBy = "piece")
-//    private Collection<ComponentEntity> components;
+    @OneToMany(mappedBy = "piece")
+    private Collection<ComponentEntity> components;
 
     public String getFullDesc() {
         return description + "\n\n" + "Type: " + type + "\n" + category + "\n\n" +
